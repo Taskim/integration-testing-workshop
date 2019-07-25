@@ -1,0 +1,60 @@
+{
+    "name": "integration-testing-workshop",
+    "homepage": "http://taskim.github.io/integration-testing-workshop",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "babel-jest": "^24.8.0",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.1.0",
+        "react-scripts": "3.0.1",
+        "redux": "^4.0.4",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-saga": "^1.0.5",
+        "uuidv4": "^4.0.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --verbose",
+        "eject": "react-scripts eject",
+        "test:coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/**.js --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/utils/render.js",
+        "test:debug": "react-scripts --inspect-brk=0.0.0.0 test --runInBand --no-cache",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@redux-saga/testing-utils": "^1.0.5",
+        "@testing-library/jest-dom": "^4.0.0",
+        "@testing-library/react": "^8.0.7",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "enzyme-to-json": "^3.3.5",
+        "gh-pages": "^2.1.1",
+        "jest-enzyme": "^7.0.2",
+        "jest-fetch-mock": "^2.1.2",
+        "wait-for-expect": "^1.2.0"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "**/src/**/*.js",
+            "**/src/**/*.jsx"
+        ]
+    }
+}

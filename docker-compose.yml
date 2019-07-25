@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    node:
+        image: integration-testing-workshop
+        container_name: integration-testing-workshop
+        volumes:
+            - ./src:/app/src
+            - ./coverage:/app/coverage
+        ports:
+            - 3000:3000
+            - 9229:9229

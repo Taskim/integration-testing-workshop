@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit testing components displays a spinning cat 1`] = `
+"<div className=\\"box\\" data-testid=\\"loader\\">
+  <div className=\\"cat\\">
+    <div className=\\"cat__body\\" />
+    <div className=\\"cat__body\\" />
+    <div className=\\"cat__tail\\" />
+    <div className=\\"cat__head\\" />
+  </div>
+</div>"
+`;
+
+exports[`unit testing components renders the App 1`] = `
+"<div className=\\"App\\" data-testid=\\"app\\">
+  <div className=\\"img-container\\">
+    <Loader />
+  </div>
+  <div className=\\"button-container\\">
+    <button disabled={true} className=\\"cat-button\\" onClick={[Function]} data-testid=\\"adopt-button\\">
+      Adopter ce chat
+    </button>
+    <button className=\\"cat-button nope\\" onClick={[Function: mockConstructor]} data-testid=\\"fetch-button\\">
+      Voir un autre chat
+    </button>
+  </div>
+</div>"
+`;
+
+exports[`unit testing components renders the App 2`] = `
+"<div className=\\"App\\" data-testid=\\"app\\">
+  <div className=\\"img-container\\">
+    <img alt=\\"cat\\" src=\\"https://cdn2.thecatapi.com/images/32t.gif\\" data-testid=\\"current-cat\\" />
+  </div>
+  <div className=\\"button-container\\">
+    <button disabled={false} className=\\"cat-button\\" onClick={[Function]} data-testid=\\"adopt-button\\">
+      Adopter ce chat
+    </button>
+    <button className=\\"cat-button nope\\" onClick={[Function: mockConstructor]} data-testid=\\"fetch-button\\">
+      Voir un autre chat
+    </button>
+  </div>
+  <div className=\\"adopted-cats-container\\" data-testid=\\"collection\\">
+    <h1>
+      Mes chats
+      <span data-testid=\\"adopted-cat-count\\">
+        1
+      </span>
+    </h1>
+    <div className=\\"adopted-cats\\">
+      <div className=\\"adopted-cat\\" data-testid=\\"adopted-cat\\">
+        <img alt=\\"adopted-cat\\" src=\\"https://cdn2.thecatapi.com/images/32t.gif\\" />
+      </div>
+    </div>
+  </div>
+</div>"
+`;
