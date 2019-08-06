@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 import './index.css'
 import Main from './container'
 import reducers from './reducers'
-import sagas from './sagas'
+import { catWatcher } from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -17,7 +17,7 @@ const store = createStore(
     composeWithDevTools(applyMiddleware(sagaMiddleware))
 )
 
-sagaMiddleware.run(sagas)
+sagaMiddleware.run(catWatcher)
 
 const App = () => (
     <Provider store={store}>

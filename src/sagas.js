@@ -3,7 +3,7 @@ import { takeLatest, call, put } from 'redux-saga/effects'
 import { fetchCat } from './api'
 import { fetchCatSuccess, fetchCatFailure } from './actions'
 
-function* fetchCatSaga() {
+export function* fetchCatFlow() {
     try {
         const cat = yield call(fetchCat)
         yield put(fetchCatSuccess(cat[0]))
@@ -12,6 +12,6 @@ function* fetchCatSaga() {
     }
 }
 
-export default function* saga() {
-    yield takeLatest('FETCH_CAT_REQUEST', fetchCatSaga)
+export function* catWatcher() {
+    yield takeLatest('FETCH_CAT_REQUEST', fetchCatFlow)
 }

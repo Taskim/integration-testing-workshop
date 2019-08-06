@@ -2,7 +2,7 @@ import React from 'react'
 import './Loader.css'
 
 const Loader = () => (
-    <div className="box">
+    <div className="box" data-testid="loader">
         <div className="cat">
             <div className="cat__body" />
             <div className="cat__body" />

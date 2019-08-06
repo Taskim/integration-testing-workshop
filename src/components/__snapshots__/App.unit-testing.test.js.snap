@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit testing components displays a spinning cat 1`] = `ShallowWrapper {}`;
+
+exports[`unit testing components renders the App 1`] = `ShallowWrapper {}`;
+
+exports[`unit testing components renders the App 2`] = `ShallowWrapper {}`;
