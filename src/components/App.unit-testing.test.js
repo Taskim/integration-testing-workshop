@@ -89,8 +89,8 @@ describe('unit testing', () => {
     describe('reducer', () => {
         const initialState = {
             adoptedCats: [],
-            cat: null,
-            status: null,
+            cat: undefined,
+            status: undefined,
         }
         it('returns the initial state', () => {
             expect(reducer(undefined, {})).toEqual(initialState)
@@ -164,13 +164,13 @@ describe('unit testing', () => {
         it('maps state to props 🤷‍♂️ and gives more coverage', () => {
             const initialState = {
                 adoptedCats: [],
-                cat: null,
-                status: null,
+                cat: undefined,
+                status: undefined,
             }
             expect(mapStateToProps(initialState)).toEqual({
                 adoptedCats: [],
-                cat: null,
-                status: null,
+                cat: undefined,
+                status: undefined,
             })
         })
     })

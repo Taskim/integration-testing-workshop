@@ -1,6 +1,6 @@
 const initialState = {
-    cat: null,
-    status: null,
+    cat: undefined,
+    status: undefined,
     adoptedCats: [],
 }
 
