@@ -1,35 +1,47 @@
 import '@testing-library/react/cleanup-after-each'
 import '@testing-library/jest-dom/extend-expect'
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import React from 'react'
 import { render, wait } from '@testing-library/react'
-import { mount } from 'enzyme'
 
 import App from '../container'
 import reducer from '../reducers'
-import { fetchCatRequest } from '../actions'
+import { fetchCat } from '../api'
+import { sagaMiddleware } from '../store'
+
+import { catWatcher } from '../sagas'
+
+jest.mock('../api')
 
 function renderWithRedux(
     ui,
-    { initialState, store = createStore(reducer, initialState) } = {}
+    {
+        initialState,
+        store = createStore(
+            reducer,
+            initialState,
+            applyMiddleware(sagaMiddleware)
+        ),
+    } = {}
 ) {
+    sagaMiddleware.run(catWatcher)
+
     return {
         ...render(<Provider store={store}>{ui}</Provider>),
-        // adding `store` to the returned utilities to allow us
-        // to reference it in our tests (just try to avoid using
-        // this to test implementation details).
         store,
     }
 }
 
-xit('renders the App', async () => {
-    const { container, getByTestId } = renderWithRedux(<App />)
-    // console.log(container.debug())
-    debugger
-    expect(1).toBe(1)
-    // await wait(() => {
+it('renders the App', async () => {
+    const { getByTestId, queryByTestId } = renderWithRedux(<App />)
+
     expect(getByTestId('loader')).toBeInTheDocument()
-    // })
+    expect(queryByTestId('current-cat')).not.toBeInTheDocument()
+
+    await wait(() => {
+        expect(queryByTestId('loader')).not.toBeInTheDocument()
+        expect(getByTestId('current-cat')).toBeInTheDocument()
+    })
 })

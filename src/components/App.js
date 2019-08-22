@@ -17,7 +17,11 @@ class App extends Component {
             <div className="App">
                 <div className="img-container">
                     {status === 'loaded' && cat && (
-                        <img alt="cat" src={cat.url} />
+                        <img
+                            alt="cat"
+                            src={cat.url}
+                            data-testid="current-cat"
+                        />
                     )}
                     {status === 'loading' && <Loader />}
                 </div>
