@@ -1,5 +1,6 @@
 {
     "name": "integration-testing-workshop",
+    "homepage": "http://taskim.github.io/integration-testing-workshop",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -19,7 +20,9 @@
         "test": "react-scripts test --verbose",
         "eject": "react-scripts eject",
         "test:coverage": "react-scripts test --coverage --watchAll=false --collectCoverageFrom=src/**/**.js --collectCoverageFrom=!src/index.js",
-        "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache"
+        "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -43,6 +46,7 @@
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
         "enzyme-to-json": "^3.3.5",
+        "gh-pages": "^2.1.1",
         "jest-enzyme": "^7.0.2",
         "jest-fetch-mock": "^2.1.2",
         "wait-for-expect": "^1.2.0"
