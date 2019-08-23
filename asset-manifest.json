@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/integration-testing-workshop/static/css/main.4bb74d97.chunk.css",
+    "main.js": "/integration-testing-workshop/static/js/main.b995d42b.chunk.js",
+    "main.js.map": "/integration-testing-workshop/static/js/main.b995d42b.chunk.js.map",
+    "runtime~main.js": "/integration-testing-workshop/static/js/runtime~main.b324c6da.js",
+    "runtime~main.js.map": "/integration-testing-workshop/static/js/runtime~main.b324c6da.js.map",
+    "static/js/2.de3906b9.chunk.js": "/integration-testing-workshop/static/js/2.de3906b9.chunk.js",
+    "static/js/2.de3906b9.chunk.js.map": "/integration-testing-workshop/static/js/2.de3906b9.chunk.js.map",
+    "index.html": "/integration-testing-workshop/index.html",
+    "precache-manifest.453d5542b6a0a177885572de7e0a2639.js": "/integration-testing-workshop/precache-manifest.453d5542b6a0a177885572de7e0a2639.js",
+    "service-worker.js": "/integration-testing-workshop/service-worker.js",
+    "static/css/main.4bb74d97.chunk.css.map": "/integration-testing-workshop/static/css/main.4bb74d97.chunk.css.map"
+  }
+}
