@@ -1,6 +1,5 @@
 .App {
     text-align: center;
-    /* background: #abc3c7; */
     background-color: #e6dcdc;
     min-height: 100vh;
 }
@@ -11,11 +10,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .img-container > img {
     max-height: 100%;
     width: auto;
+}
+
+.button-container {
+    height: 76px;
 }
 
 .cat-button {
@@ -42,6 +46,12 @@
 
 .nope:hover {
     background: url('https://media0.giphy.com/media/rCxogJBzaeZuU/giphy.gif?cid=790b76115d47e1034f47536a7331a908&rid=giphy.gif');
+    background-size: cover;
+}
+
+.retry:hover {
+    background: url('https://media1.giphy.com/media/cfuL5gqFDreXxkWQ4o/giphy.gif?cid=790b76119549d1085ee88f9173173614825134c690b4b7b6&rid=giphy.gif');
+    background-size: cover;
 }
 
 .adopted-cats-container {
@@ -64,4 +74,14 @@ h1 {
 
 .adopted-cat > img {
     width: 100%;
+}
+
+.error-message {
+    color: #fe5b5f;
+    font-size: 20px;
+    margin: 16px 0 24px;
+}
+
+.cat-error-img {
+    height: 200px;
 }

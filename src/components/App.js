@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Loader from './Loader.js'
+import catError from './error.png'
 
 class App extends Component {
     componentDidMount() {
@@ -24,17 +25,43 @@ class App extends Component {
                         />
                     )}
                     {status === 'loading' && <Loader />}
+                    {status === 'error' && (
+                        <React.Fragment>
+                            <img
+                                src={catError}
+                                alt="cat-error"
+                                className="cat-error-img"
+                            />
+                            <div className="error-message">
+                                Déso, j'ai eu la flemme là frère. Réessaye.
+                            </div>
+                        </React.Fragment>
+                    )}
                 </div>
-                <button
-                    disabled={status !== 'loaded'}
-                    className="cat-button"
-                    onClick={this.adopt}
-                >
-                    Adopter ce chat
-                </button>
-                <button className="cat-button nope" onClick={fetchCat}>
-                    Voir un autre chat
-                </button>
+                <div className="button-container">
+                    {status !== 'error' && (
+                        <React.Fragment>
+                            <button
+                                disabled={status !== 'loaded'}
+                                className="cat-button"
+                                onClick={this.adopt}
+                            >
+                                Adopter ce chat
+                            </button>
+                            <button
+                                className="cat-button nope"
+                                onClick={fetchCat}
+                            >
+                                Voir un autre chat
+                            </button>
+                        </React.Fragment>
+                    )}
+                    {status === 'error' && (
+                        <button className="cat-button retry" onClick={fetchCat}>
+                            Réessayer
+                        </button>
+                    )}
+                </div>
                 {adoptedCats.length > 0 && (
                     <div className="adopted-cats-container">
                         <h1>{`Mes chats (${adoptedCats.length})`}</h1>
