@@ -78,10 +78,11 @@ class App extends Component {
                         data-testid="collection"
                     >
                         <h1>
-                            {`Mes chats`}
+                            {`Mes chats (`}
                             <span data-testid="adopted-cat-count">
                                 {adoptedCats.length}
                             </span>
+                            {`)`}
                         </h1>
                         <div className="adopted-cats">
                             {adoptedCats.map(cat => (
