@@ -42,10 +42,11 @@ exports[`unit testing components renders the App 2`] = `
   </div>
   <div className=\\"adopted-cats-container\\" data-testid=\\"collection\\">
     <h1>
-      Mes chats
+      Mes chats (
       <span data-testid=\\"adopted-cat-count\\">
         1
       </span>
+      )
     </h1>
     <div className=\\"adopted-cats\\">
       <div className=\\"adopted-cat\\" data-testid=\\"adopted-cat\\">
